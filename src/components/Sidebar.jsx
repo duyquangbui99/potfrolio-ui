@@ -10,13 +10,15 @@ import resumeIcon from '../assets/images/resumeIcon.svg';
 import hiremeIcon from '../assets/images/hireme.svg';
 
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
     return (
         <div className="main-sidebar">
-            <div className="nav-side-bar side-bar" id="sidebar">
-                <h2>Quang Bui</h2>
+            {/* Sidebar with toggle state */}
+            <div className={`nav-side-bar side-bar ${isOpen ? 'sidebar-open' : ''}`}>
+                {!isOpen && <h2>Quang Bui</h2>}
                 <img src={avatar} alt="avatar" className="img-ava" />
                 <p>Hi, I'm Quang Bui | SWE intern at American Fidelity | Graduate Student at Oklahoma City University</p>
+
                 <div className="logo-div">
                     <img src={addressPin} alt="Address Pin" className="address-pin" />
                     <p>Houston, Texas</p>
@@ -31,15 +33,15 @@ const Sidebar = () => {
                         <img src={gitHubIcon} alt="Github Logo" className="github-icon" />
                     </a>
                 </div>
-                {/* Hidden Sidebar items for navigation for smaller screen */}
+
                 <div className="padd20 hidden-deft">
-                    <a href="#aboutme" id="aboutMe">
+                    <a href="#aboutme">
                         <div className="logo-div">
                             <img src={personIcon} alt="person Logo" className="person-icon" />
                             <h3>About Me</h3>
                         </div>
                     </a>
-                    <a href="#projects" id="hahaproject">
+                    <a href="#projects">
                         <div className="logo-div">
                             <img src={projectIcon} alt="project Logo" className="project-icon" />
                             <h3>Projects</h3>
@@ -51,7 +53,7 @@ const Sidebar = () => {
                             <h3>Resume</h3>
                         </div>
                     </a>
-                    <div className="hire-me-button" id="btn-contact">
+                    <div className="hire-me-button">
                         <a href="#contact">
                             <div className="logo-div logo-section">
                                 <img src={hiremeIcon} alt="hireme Logo" className="hireme-icon" />
@@ -60,17 +62,18 @@ const Sidebar = () => {
                         </a>
                     </div>
                 </div>
+
             </div>
 
-            { /* Sidebar items for navigation */}
-            <div className="side-bar nav-items" id="nav-items">
-                <a href="#aboutme" id="aboutMe">
+            {/* Static Nav for large screen */}
+            <div className="side-bar nav-items">
+                <a href="#aboutme">
                     <div className="logo-div">
                         <img src={personIcon} alt="person Logo" className="person-icon" />
                         <h3>About Me</h3>
                     </div>
                 </a>
-                <a href="#projects" id="hahaproject">
+                <a href="#projects">
                     <div className="logo-div">
                         <img src={projectIcon} alt="project Logo" className="project-icon" />
                         <h3>Projects</h3>
@@ -82,7 +85,7 @@ const Sidebar = () => {
                         <h3>Resume</h3>
                     </div>
                 </a>
-                <div class="hire-me-button" id="btn-contact">
+                <div className="hire-me-button">
                     <a href="#contact">
                         <div className="logo-div logo-section">
                             <img src={hiremeIcon} alt="hireme Logo" className="hireme-icon" />
@@ -94,5 +97,6 @@ const Sidebar = () => {
         </div>
     );
 };
+
 
 export default Sidebar;

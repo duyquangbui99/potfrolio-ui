@@ -3,7 +3,7 @@ import resumeIcon from '../assets/images/resumeIcon.svg';
 import avatar from '../assets/images/tranAva.png';
 
 
-function AboutMe({ children }) {
+function AboutMe({ isOpen, children }) {
     return (
         <div className="main-about-me" id="aboutme">
             <div className="about-me">
@@ -41,13 +41,16 @@ function AboutMe({ children }) {
                     <div className="line-break-3"></div>
                 </div>
 
-                <div className="circle-container">
-                    <div className="circle circle1"></div>
-                    <div className="circle circle2"></div>
-                    <div className="avatar-container">
-                        <img src={avatar} alt="Avatar" className="avatar" />
+                {/* ⬇️ Conditionally render */}
+                {!isOpen && (
+                    <div className="circle-container">
+                        <div className="circle circle1"></div>
+                        <div className="circle circle2"></div>
+                        <div className="avatar-container">
+                            <img src={avatar} alt="Avatar" className="avatar" />
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
 
             {children}

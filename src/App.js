@@ -1,3 +1,4 @@
+import { useState } from "react";
 // App.jsx
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
@@ -14,11 +15,13 @@ import './styles/resume.css';
 
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <div className="flex-row">
-      <Sidebar />
-      <Navbar />
-      <AboutMe>
+      <Sidebar isOpen={isSidebarOpen} />
+      <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
+      <AboutMe isOpen={isSidebarOpen}>
         <TechStack />
       </AboutMe>
     </div>
