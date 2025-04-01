@@ -7,11 +7,7 @@ import TechStack from "./components/TechStack";
 
 // src/App.js
 import './styles/global.css';
-import './styles/sidebarNav.css';
-import './styles/aboutMe.css';
-import './styles/hireme.css';
-import './styles/project.css';
-import './styles/resume.css';
+
 
 
 function App() {

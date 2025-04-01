@@ -1,13 +1,15 @@
 // Sidebar.jsx
 import React from "react";
-import avatar from '../assets/images/avatar.png';
+import avatar from '../assets/images/mePic.JPG';
 import addressPin from '../assets/images/location.svg';
 import linkedInIcon from '../assets/images/linkedInIcon.svg';
 import gitHubIcon from '../assets/images/githubIcon.svg';
 import personIcon from '../assets/images/personIcon.svg';
 import projectIcon from '../assets/images/project.svg';
 import resumeIcon from '../assets/images/resumeIcon.svg';
-import hiremeIcon from '../assets/images/hireme.svg';
+import hiremeIcon from '../assets/images/hireme.png';
+
+import '../styles/sidebarNav.css';
 
 
 const Sidebar = ({ isOpen }) => {
