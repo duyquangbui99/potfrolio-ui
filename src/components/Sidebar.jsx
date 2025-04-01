@@ -9,6 +9,8 @@ import projectIcon from '../assets/images/project.svg';
 import resumeIcon from '../assets/images/resumeIcon.svg';
 import hiremeIcon from '../assets/images/hireme.png';
 
+import '../styles/sidebarNav.css';
+
 
 const Sidebar = ({ isOpen }) => {
     return (

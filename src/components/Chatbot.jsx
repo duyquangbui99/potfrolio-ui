@@ -1,9 +1,11 @@
-// src/components/Chatbot.jsx
 import { useState, useRef, useEffect } from "react";
 import chatPrompt from "../chatbotConfig";
 import botIcon from '../assets/images/bot.svg';
 import upArrowIcon from '../assets/images/up-arrow.svg';
 import githubIcon from '../assets/images/githubIcon.svg';
+
+
+import '../styles/project.css';
 
 function Chatbot() {
     const [messages, setMessages] = useState([

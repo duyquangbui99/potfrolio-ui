@@ -2,6 +2,9 @@ import projectIcon from '../assets/images/project.svg';
 import resumeIcon from '../assets/images/resumeIcon.svg';
 import avatar from '../assets/images/meAvatar.png';
 import Chatbot from './Chatbot';
+import Projects from './Projects';
+
+import '../styles/aboutMe.css';
 
 
 function AboutMe({ isOpen, children }) {
@@ -61,6 +64,12 @@ function AboutMe({ isOpen, children }) {
                 <h1>PROJECT</h1>
                 <Chatbot />
             </div>
+
+            <div className="project-section" id="projects">
+                <h1 style={{ paddingTop: "30px" }}>MORE PROJECTS</h1>
+                <Projects />
+            </div>
+
         </div>
     );
 }
