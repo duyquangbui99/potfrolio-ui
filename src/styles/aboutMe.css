@@ -1,0 +1,175 @@
+.main-about-me {
+    margin: 20px;
+    margin-left: 0;
+    width: 100%;
+    /*height: calc(100vh - 80px);*/
+    height: auto;
+    border: 1px solid rgb(178, 173, 173);
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.about-me-text {
+    max-width: 70%;
+}
+
+
+/* Container to position everything */
+.circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional border to visualize the container */
+}
+
+/* Styles for the circles */
+.circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    /* Outline */
+    background-color: transparent;
+    /* No fill */
+}
+
+/* Positioning the first circle at the top-right */
+.circle1 {
+    top: 10px;
+    right: 10px;
+    border-color: black;
+    /* Different border color for visibility */
+}
+
+/* Positioning the second circle at the bottom-left */
+.circle2 {
+    bottom: 10px;
+    left: 10px;
+    border-color: black;
+    /* Different border color for visibility */
+}
+
+/* Avatar container in the middle */
+.avatar-container {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    width: 100%;
+    height: auto;
+}
+
+/* Avatar container in the middle */
+.hide-circle-container {
+    display: none;
+}
+
+.line-break-3 {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(210, 210, 210);
+    margin-top: 35px;
+}
+
+/* Tech I use */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap onto the next row */
+    justify-content: space-between;
+    /* Ensures equal space between items */
+    margin: 0 auto;
+}
+
+/* Each item (flex-row) */
+.flex-iem {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 20px);
+    /* Ensures three items per row, accounting for margin */
+    margin-bottom: 20px;
+    /* Adds space between rows */
+    box-sizing: border-box;
+    /* Include padding/border in width calculation */
+    padding: 10px;
+}
+
+
+.tech-used {
+    padding: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.tech-icon {
+    width: 40px;
+    height: 40px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.copy-right {
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-right p {
+    font-size: 14px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .main-about-me {
+        border: none;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .about-me {
+        padding-top: 0;
+        flex-direction: column;
+    }
+
+    .about-me-text {
+        max-width: 100%;
+    }
+
+
+    .tech-used,
+    .about-me {
+        padding: 25px;
+    }
+
+    .line-break-3 {
+        display: none;
+    }
+
+    .mutiple-icon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-iem {
+        width: 100%;
+    }
+}

@@ -1,0 +1,229 @@
+.project-section {
+    padding: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.chatbot-project-div {
+    display: flex;
+}
+
+.chatbot-info-div {
+    width: 30%;
+    padding: 20px
+}
+
+.chat-container {
+    width: 70%;
+    margin-top: 20px;
+}
+
+.bot-response-container {
+    position: relative;
+}
+
+.bot-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+
+/* Style the chat box */
+#chat-box {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 10px;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* User's message styling */
+.user-message {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 8px 12px;
+    /* Adjust padding to fit the text tightly */
+    border-radius: 10px;
+    margin: 5px 0;
+    /* Reduce vertical margin */
+    text-align: right;
+    display: inline-block;
+    /* Make the div size adjust to the text content */
+    max-width: 70%;
+    /* Optional: Limit width for long text */
+    align-self: flex-end;
+    /* Align to the right in the chat box */
+    word-wrap: break-word;
+    /* Ensure long words break and don't overflow */
+}
+
+
+
+/* GPT's message styling */
+.bot-message {
+    padding: 8px 55px;
+    border-radius: 10px;
+    margin: 5px 0;
+    text-align: left;
+    display: inline-block;
+    max-width: 70%;
+    align-self: flex-start;
+    word-wrap: break-word;
+    /* Ensure long words break and don't overflow */
+}
+
+
+.bot-icon,
+.up-arrow-icon {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px;
+}
+
+.up-arrow-icon {
+    padding: 0;
+    padding-top: 5px;
+}
+
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#user-input {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+input:focus {
+    outline: none;
+    /* This removes the blue outline */
+}
+
+
+
+#send-button {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+/* More project */
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Project grid with 1, 2, or 3 columns depending on screen size */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Project card styling */
+.project-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    height: 450px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+/* Content area of the project card */
+.content {
+    padding: .8rem;
+}
+
+.content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.content p {
+    color: #606060;
+    margin-bottom: 1rem;
+}
+
+/* Stack badges styling */
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.badge {
+    background-color: #ebf8ff;
+    color: #3182ce;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .chatbot-project-div {
+        flex-direction: column;
+    }
+
+    .chatbot-info-div {
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    .chat-container,
+    .chatbot-info-div {
+        width: 100%;
+    }
+
+    .project-section {
+        padding: 0;
+    }
+
+    .project-card {
+        height: 420px;
+    }
+
+}
