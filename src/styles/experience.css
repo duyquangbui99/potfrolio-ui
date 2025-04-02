@@ -1,0 +1,35 @@
+.experience-section {
+    padding: 20px;
+}
+
+.experience-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.experience-card {
+    margin-bottom: 30px;
+}
+
+.experience-card h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.exp-location-date {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.experience-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.experience-card li {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}

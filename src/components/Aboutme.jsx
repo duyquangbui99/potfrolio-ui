@@ -6,7 +6,8 @@ import Chatbot from './Chatbot';
 import Projects from './Projects';
 import HireMe from './Hireme';
 import '../styles/aboutMe.css';
-
+import Experiences from './Experiences';
+import { Link } from 'react-router-dom';
 
 
 function AboutMe({ isOpen }) {
@@ -31,18 +32,19 @@ function AboutMe({ isOpen }) {
                     </p>
 
                     <div className="flex-row gap-30">
-                        <a href="#projects">
+
+                        <Link to="/?scroll=projects">
                             <div className="logo-div">
                                 <img src={projectIcon} alt="project Logo" className="project-icon" />
                                 <h3>Projects</h3>
                             </div>
-                        </a>
-                        <a href="/resume">
+                        </Link>
+                        <Link to="/resume">
                             <div className="logo-div logo-section">
                                 <img src={resumeIcon} alt="resume Logo" className="resume-icon" />
                                 <h3>Resume</h3>
                             </div>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="line-break-3"></div>
@@ -61,6 +63,8 @@ function AboutMe({ isOpen }) {
             </div>
 
             <TechStack />
+
+            <Experiences />
 
             {/* Projects Section */}
             <div className="project-section" id="projects">
