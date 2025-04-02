@@ -30,20 +30,16 @@ function Chatbot({ isOpen }) {
         setLoading(true);
 
         try {
-            const response = await fetch("https://api.openai.com/v1/chat/completions", {
+            const response = await fetch("/api/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
                 },
-                body: JSON.stringify({
-                    model: "gpt-4o",
-                    messages: [{ role: "user", content: chatPrompt + input }]
-                }),
+                body: JSON.stringify({ message: chatPrompt + input }),
             });
 
             const data = await response.json();
-            const botReply = data.choices?.[0]?.message?.content || "No response from API";
+            const botReply = data.reply || "No response from API";
 
             setMessages(prev => [...prev, { from: "bot", text: botReply }]);
         } catch (error) {
