@@ -1,13 +1,16 @@
 import projectIcon from '../assets/images/project.svg';
-import resumeIcon from '../assets/images/resumeIcon.svg';
+import resumeIcon from '../assets/images/resume.svg';
 import avatar from '../assets/images/meAvatar.png';
+import TechStack from './TechStack';
 import Chatbot from './Chatbot';
 import Projects from './Projects';
-
+import HireMe from './Hireme';
 import '../styles/aboutMe.css';
 
 
-function AboutMe({ isOpen, children }) {
+
+function AboutMe({ isOpen }) {
+
     return (
         <div className="main-about-me" id="aboutme">
             <div className="about-me">
@@ -57,18 +60,20 @@ function AboutMe({ isOpen, children }) {
                 )}
             </div>
 
-            {children}
+            <TechStack />
 
             {/* Projects Section */}
             <div className="project-section" id="projects">
                 <h1>PROJECT</h1>
-                <Chatbot />
+                <Chatbot isOpen={isOpen} />
             </div>
 
             <div className="project-section" id="projects">
                 <h1 style={{ paddingTop: "30px" }}>MORE PROJECTS</h1>
                 <Projects />
             </div>
+
+            <HireMe />
 
         </div>
     );

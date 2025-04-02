@@ -7,7 +7,7 @@ import githubIcon from '../assets/images/githubIcon.svg';
 
 import '../styles/project.css';
 
-function Chatbot() {
+function Chatbot({ isOpen }) {
     const [messages, setMessages] = useState([
         { from: "bot", text: "Feel free to ask anything!" }
     ]);
@@ -71,42 +71,43 @@ function Chatbot() {
                     <img src={githubIcon} alt="Github Logo" className="github-icon" />
                 </a>
             </div>
-
-            <div className="chat-container">
-                <div id="chat-box" ref={chatBoxRef}>
-                    {messages.map((msg, idx) => (
-                        <div
-                            key={idx}
-                            className={msg.from === "bot" ? "bot-response-container" : "user-message"}
-                        >
-                            {msg.from === "bot" && <img src={botIcon} alt="botIcon" className="bot-icon" />}
-                            <div className={msg.from === "bot" ? "bot-message" : ""}>
-                                <p>{msg.text}</p>
+            {!isOpen && (
+                <div className="chat-container">
+                    <div id="chat-box" ref={chatBoxRef}>
+                        {messages.map((msg, idx) => (
+                            <div
+                                key={idx}
+                                className={msg.from === "bot" ? "bot-response-container" : "user-message"}
+                            >
+                                {msg.from === "bot" && <img src={botIcon} alt="botIcon" className="bot-icon" />}
+                                <div className={msg.from === "bot" ? "bot-message" : ""}>
+                                    <p>{msg.text}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                    {loading && (
-                        <div className="bot-response-container">
-                            <img src={botIcon} alt="botIcon" className="bot-icon" />
-                            <div className="bot-message"><p>Loading...</p></div>
-                        </div>
-                    )}
-                </div>
+                        ))}
+                        {loading && (
+                            <div className="bot-response-container">
+                                <img src={botIcon} alt="botIcon" className="bot-icon" />
+                                <div className="bot-message"><p>Loading...</p></div>
+                            </div>
+                        )}
+                    </div>
 
-                <div className="input-container">
-                    <input
-                        id="user-input"
-                        type="text"
-                        placeholder="Ask a question..."
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        onKeyDown={handleKeyDown}
-                    />
-                    <div id="send-button" onClick={handleSend}>
-                        <img src={upArrowIcon} alt="up-arrow" className="up-arrow-icon" />
+                    <div className="input-container">
+                        <input
+                            id="user-input"
+                            type="text"
+                            placeholder="Ask a question..."
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            onKeyDown={handleKeyDown}
+                        />
+                        <div id="send-button" onClick={handleSend}>
+                            <img src={upArrowIcon} alt="up-arrow" className="up-arrow-icon" />
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 }
