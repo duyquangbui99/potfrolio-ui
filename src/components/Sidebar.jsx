@@ -6,13 +6,16 @@ import linkedInIcon from '../assets/images/linkedInIcon.svg';
 import gitHubIcon from '../assets/images/githubIcon.svg';
 import personIcon from '../assets/images/personIcon.svg';
 import projectIcon from '../assets/images/project.svg';
-import resumeIcon from '../assets/images/resumeIcon.svg';
+import resumeIcon from '../assets/images/resume.svg';
 import hiremeIcon from '../assets/images/hireme.png';
 
 import '../styles/sidebarNav.css';
+import { Link } from 'react-router-dom';
+import useScrollToSection from "../hooks/useScrollToSection";
 
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen, toggleSidebar }) => {
+    useScrollToSection();
     return (
         <div className="main-sidebar">
             {/* Sidebar with toggle state */}
@@ -35,33 +38,33 @@ const Sidebar = ({ isOpen }) => {
                         <img src={gitHubIcon} alt="Github Logo" className="github-icon" />
                     </a>
                 </div>
-
+                {/* Nav for small screen */}
                 <div className="padd20 hidden-deft">
-                    <a href="#aboutme">
+                    <Link to="/?scroll=aboutme" onClick={toggleSidebar}>
                         <div className="logo-div">
                             <img src={personIcon} alt="person Logo" className="person-icon" />
                             <h3>About Me</h3>
                         </div>
-                    </a>
-                    <a href="#projects">
+                    </Link>
+                    <Link to="/?scroll=projects" onClick={toggleSidebar}>
                         <div className="logo-div">
                             <img src={projectIcon} alt="project Logo" className="project-icon" />
                             <h3>Projects</h3>
                         </div>
-                    </a>
-                    <a href="/resume">
+                    </Link>
+                    <Link to="/resume" onClick={toggleSidebar}>
                         <div className="logo-div logo-section">
                             <img src={resumeIcon} alt="resume Logo" className="resume-icon" />
                             <h3>Resume</h3>
                         </div>
-                    </a>
+                    </Link>
                     <div className="hire-me-button">
-                        <a href="#contact">
+                        <Link to="/?scroll=contact" onClick={toggleSidebar}>
                             <div className="logo-div logo-section">
                                 <img src={hiremeIcon} alt="hireme Logo" className="hireme-icon" />
                                 <h3 className="white">Hire me</h3>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -69,31 +72,31 @@ const Sidebar = ({ isOpen }) => {
 
             {/* Static Nav for large screen */}
             <div className="side-bar nav-items">
-                <a href="#aboutme">
+                <Link to="/?scroll=aboutme">
                     <div className="logo-div">
                         <img src={personIcon} alt="person Logo" className="person-icon" />
                         <h3>About Me</h3>
                     </div>
-                </a>
-                <a href="#projects">
+                </Link>
+                <Link to="/?scroll=projects">
                     <div className="logo-div">
                         <img src={projectIcon} alt="project Logo" className="project-icon" />
                         <h3>Projects</h3>
                     </div>
-                </a>
-                <a href="/resume">
+                </Link>
+                <Link to="/resume">
                     <div className="logo-div logo-section">
                         <img src={resumeIcon} alt="resume Logo" className="resume-icon" />
                         <h3>Resume</h3>
                     </div>
-                </a>
+                </Link>
                 <div className="hire-me-button">
-                    <a href="#contact">
+                    <Link to="/?scroll=contact">
                         <div className="logo-div logo-section">
                             <img src={hiremeIcon} alt="hireme Logo" className="hireme-icon" />
                             <h3 className="white">Hire me</h3>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

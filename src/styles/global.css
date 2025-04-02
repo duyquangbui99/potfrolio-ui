@@ -63,3 +63,10 @@ a {
     height: 1px;
     background-color: rgb(210, 210, 210);
 }
+
+@media screen and (max-width: 768px) {
+    .main-sidebar {
+        margin: 0px;
+    }
+
+}
