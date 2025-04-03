@@ -25,22 +25,28 @@ function Resume() {
                 {/* Sections */}
                 <section className="education">
                     <h2>Education</h2>
-                    <div class="line"></div>
+                    <div className="line"></div>
                     <div>
                         <h3>Master's in Computer Science</h3>
-                        <p>Oklahoma City University (2024-2026)</p>
+                        <div className="flex-row">
+                            <p>Oklahoma City University</p>
+                            <p>Aug 2024- Dec 2025</p>
+                        </div>
                         <p>GPA: 4.0</p>
                     </div>
                     <div>
                         <h3>Bachelor's in Computer Science</h3>
-                        <p>Northeastern State University (2020-2023)</p>
-                        <p class="italic">Summa Cum Laude: Graduated with honors</p>
+                        <div className="flex-row">
+                            <p>Northeastern State University</p>
+                            <p>Aug 2020 - May 2023</p>
+                        </div>
+                        <p className="italic">Summa Cum Laude: Graduated with honors</p>
                     </div>
                 </section>
                 <section className="skills">
                     <h2>Technical Skills</h2>
-                    <div class="line"></div>
-                    <div class="grid">
+                    <div className="line"></div>
+                    <div className="grid">
                         <div>
                             <h3>Programming Languages:</h3>
                             <p>C#, JavaScript</p>
@@ -48,7 +54,9 @@ function Resume() {
                         </div>
                         <div>
                             <h3>Tools & Technologies:</h3>
-                            <p>VS Code, Git, MongoDB, ReactJS, Angular, .NET,  Node.js</p>
+                            <p>ReactJS, Angular, Azure</p>
+                            <p>Node.js, Flask, MongoDB, MySQL</p>
+                            <p>.NET, VS Code, Git,</p>
                             <p>Tailwind, Bootstrap, Game Development.</p>
                         </div>
                         <div>
@@ -62,34 +70,34 @@ function Resume() {
                     <div className="line"></div>
                     <div>
                         <h3>Software Development Intern</h3>
-                        <p>American Fidelity (June 2025 - Present)</p>
+                        <div className="flex-row">
+                            <p>American Fidelity (OKC, Oklahoma)</p>
+                            <p>Jan 2025 - Present</p>
+                        </div>
                         <div className="project-def">
-                            <p> ● Developed a customer feedback app with 1 other team member using the MERN stack
-                                <span style={{ fontWeight: 500 }}>(MongoDB,
-                                    Express.js, React.js, Node.js)</span>, enabling efficient customer-employee
-                                communication.
+                            <p> ● Assisted in the full-stack development of the American Fidelity internal application, optimizing performance and
+                                improving production efficiency,  <span style={{ fontWeight: 500 }}>reducing page load times by 25%</span>
+
                             </p>
                             <p>
-                                ● Designed and developed the front-end application using React.js, implementing
-                                responsive
-                                UI
-                                components and integrating with <span style={{ fontWeight: 500 }}>back-end APIs</span>
-                                built using Node.js and Express.js to
-                                manage
-                                user
-                                authentication, customer feedback. Enhancing customer satisfaction by 20% through
-                                streamlined
-                                feedback loops.
+                                ● Designed and implemented new features, models, and responsive UI components using <span style={{ fontWeight: 500 }}>C,.NET, Angular, Bootstrap
+                                    5, HTML, and SASS</span>, enhancing user experience and <span style={{ fontWeight: 500 }}>increasing accessibility by 30%</span>
+
                             </p>
-                            <p> ● Implemented manager-employee communication features, leading to a 15% improvement in
-                                employee
-                                performance and customer retention.
+
+                            <p> ● Collaborated with QA and development teams to test, refine, and deploy updates across multiple environments
+                                using Octopus Deploy, <span style={{ fontWeight: 500 }}>reducing deployment errors by 40% and improving release efficiency</span>
                             </p>
                         </div>
                     </div>
                     <div>
-                        <h3>Software Engineer</h3>
-                        <p>Tranquility Nail and Spa (June 2023 - May 2024)</p>
+                        <h3>Web Developer</h3>
+                        <div className="flex-row">
+                            <p>Tranquility Nail and Spa (Tulsa, Oklahoma)</p>
+                            <p>June 2023 - May 2024</p>
+                        </div>
+
+
                         <div className="project-def">
                             <p> ● Developed a customer feedback app with 1 other team member using the MERN stack
                                 <span style={{ fontWeight: 500 }}>(MongoDB,
@@ -100,17 +108,18 @@ function Resume() {
                                 ● Designed and developed the front-end application using React.js, implementing
                                 responsive
                                 UI
-                                components and integrating with <span style={{ fontWeight: 500 }}>back-end APIs</span>
-                                built using Node.js and Express.js to
+                                components and integrating with <span style={{ fontWeight: 500 }}>back-end APIs
+                                    built using Node.js and Express.js</span> to
                                 manage
                                 user
-                                authentication, customer feedback. Enhancing customer satisfaction by 20% through
-                                streamlined
-                                feedback loops.
+                                authentication, customer feedback.<span style={{ fontWeight: 500 }}>Enhancing customer satisfaction by 20% through
+                                    streamlined
+                                    feedback loops.</span>
                             </p>
-                            <p> ● Implemented manager-employee communication features, leading to a 15% improvement in
+
+                            <p> ● Implemented manager-employee communication features, <span style={{ fontWeight: 500 }}>leading to a 15% improvement in
                                 employee
-                                performance and customer retention.
+                                performance and customer retention.</span>
                             </p>
                         </div>
                     </div>
@@ -122,17 +131,12 @@ function Resume() {
                         <h3>WriteBetter</h3>
                         <div className="project-def">
                             <p>
-                                ● Develop a fully functional Sudoku game with a GUI using <span
-                                    style={{ fontWeight: 500 }}>Python and Tkinter.</span>
+                                ● Developed a <span style={{ fontWeight: 500 }}>full-stack AI-powered essay improvement platform </span>enabling writers to draft, paraphrase, and manage essays, leading to enhanced writing productivity. </p>
+                            <p>
+                                ● Designed and implemented a scalable Firestore data model to efficiently manage user profiles, document indexing, and essay content with real-time syncing.
                             </p>
                             <p>
-                                ● Developed a Sudoku solving algorithm to provide hints and solutions for user-generated
-                                puzzles.
-                            </p>
-                            <p>
-                                ● Incorporated features for submitting solutions, starting new games, and tracking
-                                elapsed
-                                time during gameplay.
+                                ● Built an interactive editor with dynamic sidebar navigation, live paraphrasing functionality, and seamless user experience using <span style={{ fontWeight: 500 }}>React, Google Authentication, and Firestore.</span>
                             </p>
                         </div>
                     </div>

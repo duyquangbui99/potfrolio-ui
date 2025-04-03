@@ -10,6 +10,11 @@
     border-radius: 20px;
 }
 
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Header styles */
 .header {
     text-align: center;
@@ -97,8 +102,8 @@ ul li {
 @media (max-width: 768px) {
 
     /* Mobile styles */
-    .container {
-        padding: 10px;
+    .resume-container {
+        padding: 25px;
         margin: 0;
         border: none;
         border-radius: 0;

@@ -8,6 +8,9 @@ import react from '../assets/images/react.svg';
 import mongoDB from '../assets/images/mongodb.svg';
 import sql from '../assets/images/sql.svg';
 import dotnet from '../assets/images/dotnet.svg';
+import flask from '../assets/images/flask.svg';
+import nodejs from '../assets/images/nodejs.svg';
+import angular from '../assets/images/angular.svg';
 
 
 
@@ -33,16 +36,19 @@ const techStack = [
         icon: react,
         alt: 'react',
         description: `I gained experience with React in my last job, building a customer feedback app using the MERN stack. By combining React’s flexible, component-based structure with Tailwind CSS, I was able to create a highly responsive and efficient front-end.`,
+        multiple: [react, angular]
     },
     {
         icon: mongoDB,
         alt: 'mongoDB',
         description: `I have some experience with MongoDB, mainly through integrating it with backend APIs. While I don’t work with it directly, I understand how to design schemas and manage data effectively within a full-stack application.`,
+        multiple: [nodejs, flask]
     },
     {
         icon: sql,
         alt: 'mysql',
         description: `I’m currently building a school system database with MySQL as part of my database class. I have a strong understanding of the relational database model and SQL, and I’m applying this knowledge to real-world projects.`,
+        multiple: [mongoDB, sql]
     }
 ];
 
