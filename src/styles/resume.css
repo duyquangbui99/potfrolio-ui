@@ -10,7 +10,7 @@
     border-radius: 20px;
 }
 
-.flex-row {
+.flex-row-resume {
     display: flex;
     justify-content: space-between;
 }

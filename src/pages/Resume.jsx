@@ -28,7 +28,7 @@ function Resume() {
                     <div className="line"></div>
                     <div>
                         <h3>Master's in Computer Science</h3>
-                        <div className="flex-row">
+                        <div className="flex-row-resume">
                             <p>Oklahoma City University</p>
                             <p>Aug 2024- Dec 2025</p>
                         </div>
@@ -36,7 +36,7 @@ function Resume() {
                     </div>
                     <div>
                         <h3>Bachelor's in Computer Science</h3>
-                        <div className="flex-row">
+                        <div className="flex-row-resume">
                             <p>Northeastern State University</p>
                             <p>Aug 2020 - May 2023</p>
                         </div>
@@ -70,7 +70,7 @@ function Resume() {
                     <div className="line"></div>
                     <div>
                         <h3>Software Development Intern</h3>
-                        <div className="flex-row">
+                        <div className="flex-row-resume">
                             <p>American Fidelity (OKC, Oklahoma)</p>
                             <p>Jan 2025 - Present</p>
                         </div>
@@ -92,7 +92,7 @@ function Resume() {
                     </div>
                     <div>
                         <h3>Web Developer</h3>
-                        <div className="flex-row">
+                        <div className="flex-row-resume">
                             <p>Tranquility Nail and Spa (Tulsa, Oklahoma)</p>
                             <p>June 2023 - May 2024</p>
                         </div>

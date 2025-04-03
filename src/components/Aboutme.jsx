@@ -19,20 +19,14 @@ function AboutMe({ isOpen }) {
                     <h1>QUANG BUI</h1>
                     <h2>Dedicated and Enthusiastic Software Engineer</h2>
                     <p>
-                        I’m Quang, a tech enthusiast and grad student at Oklahoma City University, working towards my
-                        Master’s in Computer Science. I love solving problems with code and turning creative ideas into
-                        real, impactful applications. Whether I’m building AI tools to make information more accessible
-                        or crafting customer feedback apps to improve business operations, I’m all about finding smart,
-                        efficient solutions. Let’s chat if you’re looking for someone who’s driven by curiosity, loves a
-                        good challenge, and is always looking to learn and grow in the tech world.
-                    </p>
+                        Hi, I’m Quang! I’m a tech enthusiast and graduate student at Oklahoma City University, finishing my Master’s in Computer Science by December 2025.</p>
+                    <p>  I specialize in full-stack development using modern frameworks and libraries, and I have working knowledge of Azure cloud computing. As a current Software Development Intern at American Fidelity, I contribute to building scalable, real-world applications.</p>
+
                     <p style={{ fontWeight: 500 }}>
-                        I’m also actively looking for a summer 2025 internship to further apply my skills and gain
-                        hands-on experience.
+                        I am actively seeking a summer internship or full-time role as a web or full-stack developer where I can apply my skills to deliver impactful solutions.
                     </p>
 
                     <div className="flex-row gap-30">
-
                         <Link to="/?scroll=projects">
                             <div className="logo-div">
                                 <img src={projectIcon} alt="project Logo" className="project-icon" />

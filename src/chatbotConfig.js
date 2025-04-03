@@ -12,6 +12,8 @@ Oklahoma City, Oklahoma, United States
 - Collaborated with QA and development teams to test, refine, and deploy updates across multiple environments using Octopus Deploy
 - Successfully modernized legacy Visual Basic applications to C# .NET framework, implementing robust API endpoints to integrate services, resulting in improved system reliability, maintainability, and performance
 
+Project name: WriteBetter, A Full-stack AI-powered essay editor allowing users to write, paraphrase, and organize essays, featuring Google Authentication and Firestore integration.
+
 Project name: VidSummarizer, An AI-driven web app that converts YouTube videos into concise summaries using OpenAI's GPT models, developed with Langchain, Python, and Flask.
 
 Project name: Rule-Based Virtual Assisting Chatbot, A chatbot for a nail salon, built with HTML, CSS, JavaScript, and data from JSON, providing rapid responses to customer queries.
