@@ -62,7 +62,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Link to="/?scroll=contact" onClick={toggleSidebar}>
                             <div className="logo-div logo-section">
                                 <img src={hiremeIcon} alt="hireme Logo" className="hireme-icon" />
-                                <h3 className="white">Hire me</h3>
+                                <p style={{ fontWeight: 600, fontSize: '19px' }} className="white">Hire me</p>
                             </div>
                         </Link>
                     </div>
@@ -94,7 +94,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <Link to="/?scroll=contact">
                         <div className="logo-div logo-section">
                             <img src={hiremeIcon} alt="hireme Logo" className="hireme-icon" />
-                            <h3 className="white">Hire me</h3>
+                            <p style={{ fontWeight: 600, fontSize: '19px' }} className="white">Hire me</p>
                         </div>
                     </Link>
                 </div>
