@@ -1,35 +1,228 @@
+/* experience.css */
+
 .experience-section {
-    padding: 20px;
+    padding: 40px 60px;
 }
 
 .experience-section h1 {
     font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.experience-card {
-    margin-bottom: 30px;
-}
-
-.experience-card h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
+    margin-bottom: .6rem;
     color: #333;
+    position: relative;
+    display: inline-block;
 }
 
-.exp-location-date {
+.experience-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #4a6cf7;
+    border-radius: 2px;
+}
+
+.experiences-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    /*background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Header section with logo and title */
+.exp-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.exp-logo {
+    min-width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f5ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.exp-logo:hover {
+    transform: scale(1.05);
+}
+
+.exp-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.exp-title-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.exp-position-company h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1a1a1a;
+    letter-spacing: 0.02em;
+}
+
+.dot-separator {
+    margin: 0 0.5rem;
+    color: #6b7280;
+}
+
+.exp-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.location-tag,
+.date-tag,
+.position-tag {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    padding: 0.45rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.location-tag:before {
+    content: '📍';
+    margin-right: 6px;
     font-size: 0.9rem;
-    font-style: italic;
-    color: #777;
-    margin-bottom: 5px;
 }
 
-.experience-card ul {
-    list-style-type: disc;
+.date-tag:before {
+    content: '🗓️';
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+.location-tag:hover,
+.date-tag:hover {
+    background-color: #e5e7eb;
+}
+
+/* Details section with bullet points */
+.exp-details {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.6;
+    color: #374151;
+    position: relative;
     padding-left: 20px;
 }
 
-.experience-card li {
-    margin-bottom: 5px;
-    font-size: 0.95rem;
+.detail-item:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4a6cf7;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Technology stack tags */
+.tech-stack-resume {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-left: 36px;
+    align-items: center;
+}
+
+.stack-tag {
+    background-color: #e0e7ff;
+    color: #4338ca;
+    padding: 0.35rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(67, 56, 202, 0.1);
+}
+
+.stack-tag:hover {
+    background-color: #c7d2fe;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .experience-section {
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-section {
+        padding: 25px 20px;
+    }
+
+    .exp-header {
+        flex-direction: column;
+    }
+
+    .exp-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tech-stack-resume {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-section h1 {
+        font-size: 2rem;
+    }
+
+    .experience-item {
+        padding: 1rem;
+    }
+
+    .exp-position-company h3 {
+        font-size: 1.2rem;
+    }
 }

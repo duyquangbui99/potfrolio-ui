@@ -22,32 +22,33 @@ const techStack = [
     },
     {
         icon: cSharp,
-        alt: 'c#',
-        description: `I got into C# during a game programming class, and it’s been a fascinating journey. C# really stood out to me, especially for its strong support of object-oriented programming (OOP). I’ve used it primarily with Unity for game development.`,
+        alt: 'c# .Net',
+        description: `Gained hands-on experience with C# and the .NET framework through recent development work, including porting a legacy VB application to C#. Previously explored C# in a game programming course using Unity, where I built interactive projects and deepened my understanding of object-oriented programming (OOP) principles.`,
         multiple: [cSharp, dotnet]
     },
     {
         icon: '/static/images/html.svg',
-        alt: 'html',
+        alt: 'html, css, js',
         description: `I work with HTML, CSS, and JavaScript almost daily to build projects. These core web technologies are essential for creating responsive, dynamic applications, and they’ve been the foundation of much of my development work.`,
         multiple: [html, css, js]
     },
     {
         icon: react,
-        alt: 'react',
-        description: `I gained experience with React in my last job, building a customer feedback app using the MERN stack. By combining React’s flexible, component-based structure with Tailwind CSS, I was able to create a highly responsive and efficient front-end.`,
+        alt: 'react, angular',
+        description: `I enjoy working with React and Angular for their component-based structure, which made it easier to build and maintain scalable UIs in my recent projects. React’s flexibility was especially useful when developing the customer feedback app, while Angular’s built-in tools helped streamline frontend tasks in my internship.`,
         multiple: [react, angular]
     },
     {
-        icon: mongoDB,
-        alt: 'mongoDB',
-        description: `I have some experience with MongoDB, mainly through integrating it with backend APIs. While I don’t work with it directly, I understand how to design schemas and manage data effectively within a full-stack application.`,
+        icon: nodejs,
+        alt: 'nodejs and flask',
+        description: `I used Node.js to build RESTful APIs for full-stack applications, including a chatbot project where I integrated OpenAI’s API for dynamic responses.
+        I also worked with Flask to develop lightweight backend services for AI-driven apps, focusing on clean, efficient API design and rapid prototyping.`,
         multiple: [nodejs, flask]
     },
     {
         icon: sql,
         alt: 'mysql',
-        description: `I’m currently building a school system database with MySQL as part of my database class. I have a strong understanding of the relational database model and SQL, and I’m applying this knowledge to real-world projects.`,
+        description: `I’ve worked with both MongoDB and MySQL in my internship and previous job, choosing between NoSQL or SQL based on the application's data structure and requirements. I enjoy designing schemas that ensure efficiency, scalability, and clean data organization.`,
         multiple: [mongoDB, sql]
     }
 ];
