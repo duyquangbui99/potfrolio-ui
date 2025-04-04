@@ -155,7 +155,7 @@
     content: '•';
     position: absolute;
     left: 0;
-    color: #4a6cf7;
+    color: #374151;
     font-size: 1.5rem;
     line-height: 1;
 }
@@ -171,13 +171,13 @@
 
 .stack-tag {
     background-color: #e0e7ff;
-    color: #4338ca;
+    color: #4a6cf7;
     padding: 0.35rem 0.85rem;
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 500;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(67, 56, 202, 0.1);
+    box-shadow: 0 2px 4px rgba(55, 124, 242, 0.1);
 }
 
 .stack-tag:hover {

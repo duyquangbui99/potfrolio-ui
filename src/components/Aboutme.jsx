@@ -23,7 +23,7 @@ function AboutMe({ isOpen }) {
                     <p>  I specialize in full-stack development using modern frameworks and libraries, and I have working knowledge of Azure cloud computing. As a current Software Development Intern at American Fidelity, I contribute to building scalable, real-world applications.</p>
 
                     <p style={{ fontWeight: 500 }}>
-                        I am actively seeking a summer internship or full-time role as a web or full-stack developer where I can apply my skills to deliver impactful solutions.
+                        I am actively seeking a summer internship or full-time role as a software engineer or full-stack developer where I can apply my skills to deliver impactful solutions.
                     </p>
 
                     <div className="flex-row gap-30">
