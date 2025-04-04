@@ -13,7 +13,7 @@
     display: inline-block;
 }
 
-.experience-section h1::after {
+/* .experience-section h1::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -22,7 +22,7 @@
     height: 4px;
     background: #4a6cf7;
     border-radius: 2px;
-}
+} */
 
 .experiences-container {
     display: flex;
