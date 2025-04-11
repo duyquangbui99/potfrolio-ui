@@ -10,7 +10,8 @@ const expData = [
         date: "Jan 2025 – Present",
         details: [
             "Developed and maintained features for a full-stack web application, resolved critical bugs, implemented CI/CD pipelines, and integrated Azure services to enhance deployment efficiency and system reliability.",
-            "Migrated a standalone legacy Visual Basic application to a modern C# .NET framework, improving code maintainability, performance, and aligning the application with current technology standards",
+            "Migrated a standalone legacy Visual Basic application to a modern C# .NET framework, improving code maintainability, performance, and aligning the application with current technology standards.",
+            "Collaborate with QA and development teams to test, refine, and deploy updates across multiple environments using Octopus Deploy."
         ],
         stack: ["Azure", "Angular", "TypeScript", "C#", ".NET"]
     },
