@@ -10,6 +10,9 @@ import Resume from './pages/Resume'; //
 import './styles/global.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
+
 
 
 function App() {
@@ -24,6 +27,7 @@ function App() {
           <Route path="/" element={<><AboutMe isOpen={isSidebarOpen}></AboutMe></>} />
           <Route path="/resume" element={<><Resume /></>} />
         </Routes>
+        <SpeedInsights />
       </div>
     </Router>
   );
