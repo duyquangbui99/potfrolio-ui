@@ -1,0 +1,67 @@
+.booking-project {
+    padding-top: 2rem;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-title {
+    font-weight: 500;
+    color: #333;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .project-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .booking-image {
+        max-width: 70%;
+    }
+}
+
+.project-info {
+    max-width: 600px;
+}
+
+
+.project-stat {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.github-link {
+    display: inline-block;
+}
+
+.github-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.booking-image {
+    border: 2px solid #6fdd8b;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-image:hover {
+    border: 2px solid #61c67b;
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container {
+    gap: 20px;
+}

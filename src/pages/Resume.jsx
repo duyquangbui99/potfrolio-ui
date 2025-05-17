@@ -54,7 +54,7 @@ function Resume() {
                         </div>
                         <div>
                             <h3>Tools & Technologies:</h3>
-                            <p>ReactJS, Angular, Azure</p>
+                            <p>ReactJS, Angular, Blazor, Azure</p>
                             <p>Node.js, Flask, MongoDB, MySQL</p>
                             <p>.NET, VS Code, Git,</p>
                             <p>Tailwind, Bootstrap, Game Development.</p>
@@ -127,6 +127,21 @@ function Resume() {
                 <section className="projects">
                     <h2>Project Experience</h2>
                     <div className="line"></div>
+                    <div>
+                        <h3>BookSmart</h3>
+                        <div className="project-def">
+                            <p>
+                                ● Built and deployed a full-stack booking management system, <span style={{ fontWeight: 500 }}>handling over 200 booking requests per day</span> ,
+                                streamlining appointment scheduling and resource allocation for both customers and staff.
+                            </p>
+                            <p>
+                                ● Designed a responsive UI and real-time email notifications, <span style={{ fontWeight: 500 }}>reducing no-shows by 30% and increasing booking
+                                    efficiency by 25%.</span> </p>
+                            <p>Developed AI-powered caption generation and Facebook auto-posting features,<span style={{ fontWeight: 500 }}>increasing weekly social media
+                                engagement by 40%.</span> </p>
+                        </div>
+                    </div>
+
                     <div>
                         <h3>WriteBetter</h3>
                         <div className="project-def">

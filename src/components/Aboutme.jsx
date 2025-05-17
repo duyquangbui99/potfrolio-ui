@@ -7,6 +7,7 @@ import Projects from './Projects';
 import HireMe from './Hireme';
 import '../styles/aboutMe.css';
 import Experiences from './Experiences';
+import BookingProject from './BookingProject';
 import { Link } from 'react-router-dom';
 
 
@@ -64,6 +65,7 @@ function AboutMe({ isOpen }) {
             <div className="project-section" id="projects">
                 <h1>PROJECT</h1>
                 <Chatbot isOpen={isOpen} />
+                <BookingProject />
             </div>
 
             <div className="project-section" id="projects">
