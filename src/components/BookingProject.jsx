@@ -18,7 +18,6 @@ function BookingProject() {
                     <p>
                         Empowered salon managers with a centralized tool for appointments, staff coordination, and marketing—all in a single streamlined app.
                     </p>
-                    <p>Used by 5 local businesses</p>
                     <p>Demo Account:</p>
                     <p>Username: justine</p>
                     <p>Password: 1021</p>
