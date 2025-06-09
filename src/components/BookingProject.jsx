@@ -14,7 +14,7 @@ function BookingProject() {
                     className="booking-image"
                 />
                 <div className="project-info">
-                    <h3>BookSmart</h3>
+                    <h3>Schedulo</h3>
                     <p>
                         Empowered salon managers with a centralized tool for appointments, staff coordination, and marketing—all in a single streamlined app.
                     </p>
