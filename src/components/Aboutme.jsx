@@ -21,8 +21,8 @@ function AboutMe({ isOpen }) {
             </div>
             <div className="about-me">
                 <div className="about-me-text">
-                    <h1 className="hero-name">Quang<br />Bui</h1>
-                    <h2 className="hero-role">full stack developer.</h2>
+                    <h1 className="hero-name">Quang Bui</h1>
+                    <h2 className="hero-role">full stack developer</h2>
                     <p>
                         Hi, I’m Quang! I’m a Full Stack Developer at Paul Logistic in Tulsa, OK, with a Master’s in Computer Science from Oklahoma City University.</p>
                     <p>  I build automation pipelines with Python and Selenium, serverless integrations on AWS , and internal dashboards with React, Node.js, and PostgreSQL. Before that, I was a Software Development Intern at American Fidelity, shipping features in C#, .NET, and Angular.</p>
