@@ -1,6 +1,7 @@
 // src/components/ClosedScreen.jsx
 // What's left on the "desktop" after the red dot closes the window.
 import { useWindow } from '../context/WindowContext';
+import CareerRunner from './CareerRunner';
 import '../styles/window.css';
 
 function ClosedScreen() {
@@ -18,6 +19,7 @@ function ClosedScreen() {
                     Say hello
                 </a>
             </div>
+            <CareerRunner />
         </section>
     );
 }
