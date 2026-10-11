@@ -4,9 +4,6 @@ import avatar from '../assets/images/mePic.webp';
 import addressPin from '../assets/images/location.svg';
 import linkedInIcon from '../assets/images/linkedInIcon.svg';
 import gitHubIcon from '../assets/images/githubIcon.svg';
-import personIcon from '../assets/images/personIcon.svg';
-import projectIcon from '../assets/images/project.svg';
-import resumeIcon from '../assets/images/resume.svg';
 import hiremeIcon from '../assets/images/hireme.png';
 
 import '../styles/sidebarNav.css';
@@ -40,24 +37,17 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </div>
                 {/* Nav for small screen */}
                 <div className="padd20 hidden-deft">
-                    <Link to="/?scroll=aboutme" onClick={toggleSidebar}>
-                        <div className="logo-div">
-                            <img src={personIcon} alt="person Logo" className="person-icon" />
+                    <div className="nav-links">
+                        <Link to="/?scroll=aboutme" onClick={toggleSidebar}>
                             <h3>About Me</h3>
-                        </div>
-                    </Link>
-                    <Link to="/?scroll=projects" onClick={toggleSidebar}>
-                        <div className="logo-div">
-                            <img src={projectIcon} alt="project Logo" className="project-icon" />
+                        </Link>
+                        <Link to="/?scroll=projects" onClick={toggleSidebar}>
                             <h3>Projects</h3>
-                        </div>
-                    </Link>
-                    <Link to="/resume" onClick={toggleSidebar}>
-                        <div className="logo-div logo-section">
-                            <img src={resumeIcon} alt="resume Logo" className="resume-icon" />
+                        </Link>
+                        <Link to="/resume" onClick={toggleSidebar}>
                             <h3>Resume</h3>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                     <div className="hire-me-button">
                         <Link to="/?scroll=contact" onClick={toggleSidebar}>
                             <div className="logo-div logo-section">
@@ -72,24 +62,17 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
             {/* Static Nav for large screen */}
             <div className="side-bar nav-items">
-                <Link to="/?scroll=aboutme">
-                    <div className="logo-div">
-                        <img src={personIcon} alt="person Logo" className="person-icon" />
+                <div className="nav-links">
+                    <Link to="/?scroll=aboutme">
                         <h3>About Me</h3>
-                    </div>
-                </Link>
-                <Link to="/?scroll=projects">
-                    <div className="logo-div">
-                        <img src={projectIcon} alt="project Logo" className="project-icon" />
+                    </Link>
+                    <Link to="/?scroll=projects">
                         <h3>Projects</h3>
-                    </div>
-                </Link>
-                <Link to="/resume">
-                    <div className="logo-div logo-section">
-                        <img src={resumeIcon} alt="resume Logo" className="resume-icon" />
+                    </Link>
+                    <Link to="/resume">
                         <h3>Resume</h3>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
                 <div className="hire-me-button">
                     <Link to="/?scroll=contact">
                         <div className="logo-div logo-section">

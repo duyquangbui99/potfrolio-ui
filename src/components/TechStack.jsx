@@ -3,7 +3,7 @@ import techStack from '../assets/techStackData';
 function TechStack() {
     return (
         <div className="tech-used">
-            <h1>TECHNICAL STACK</h1>
+            <h1 className="section-title">Technical Stack</h1>
             <div className="tech-stack">
                 {techStack.map((tech, index) => (
                     <div className="flex-iem" key={index}>

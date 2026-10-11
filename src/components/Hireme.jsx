@@ -8,8 +8,8 @@ function HireMe() {
     return (
         <>
             <section id="contact">
-                <p style={{ fontSize: "1.3rem" }}>Get in Touch</p>
-                <h1>Contact Me</h1>
+                <p className="contact-eyebrow">Get in Touch</p>
+                <h1 className="section-title">Contact Me</h1>
                 <div className="contact-info-upper-container">
                     <div className="contact-info-container">
                         <img src={mailIcon} alt="Email icon" className="email-icon" />

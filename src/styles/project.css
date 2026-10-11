@@ -1,21 +1,28 @@
 .project-section {
-    padding: 50px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 50px 70px 0;
 }
+
+/* ---------- Chatbot project ---------- */
 
 .chatbot-project-div {
     display: flex;
+    gap: 30px;
 }
 
 .chatbot-info-div {
     width: 30%;
-    padding: 20px
+    padding-top: 10px;
+}
+
+.chatbot-info-div h3,
+.project-info h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .chat-container {
     width: 70%;
-    margin-top: 20px;
 }
 
 .bot-response-container {
@@ -24,74 +31,63 @@
 
 .bot-icon {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 8px;
+    left: 4px;
 }
 
-
-
-/* Style the chat box */
 #chat-box {
-    background-color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.25);
     padding: 20px;
     padding-bottom: 10px;
     height: 400px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
 
-/* User's message styling */
 .user-message {
-    background-color: #f4f4f4;
-    color: black;
-    padding: 8px 12px;
-    /* Adjust padding to fit the text tightly */
-    border-radius: 10px;
-    margin: 5px 0;
-    /* Reduce vertical margin */
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--glass-border);
+    padding: 8px 14px;
+    border-radius: 16px 16px 4px 16px;
+    margin: 6px 0;
     text-align: right;
     display: inline-block;
-    /* Make the div size adjust to the text content */
     max-width: 70%;
-    /* Optional: Limit width for long text */
     align-self: flex-end;
-    /* Align to the right in the chat box */
     word-wrap: break-word;
-    /* Ensure long words break and don't overflow */
 }
 
+.user-message p {
+    color: var(--text);
+    margin: 0;
+}
 
-
-/* GPT's message styling */
 .bot-message {
-    padding: 8px 55px;
-    border-radius: 10px;
-    margin: 5px 0;
+    padding: 8px 14px 8px 50px;
+    margin: 6px 0;
     text-align: left;
     display: inline-block;
-    max-width: 70%;
+    max-width: 75%;
     align-self: flex-start;
     word-wrap: break-word;
-    /* Ensure long words break and don't overflow */
 }
 
+.bot-message p {
+    margin: 0;
+}
 
 .bot-icon,
 .up-arrow-icon {
-    width: 40px;
-    height: 40px;
-    padding-bottom: 5px;
+    width: 32px;
+    height: 32px;
 }
-
-.up-arrow-icon {
-    padding: 0;
-    padding-top: 5px;
-}
-
 
 .input-container {
     display: flex;
@@ -102,39 +98,45 @@
 
 #user-input {
     flex: 1;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
+    padding: 18px 64px 18px 22px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--glass-soft);
+    border: 1px solid var(--glass-border-strong);
+    border-radius: 999px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-input:focus {
+#user-input::placeholder {
+    color: var(--text-dim);
+}
+
+#user-input:focus {
     outline: none;
-    /* This removes the blue outline */
+    border-color: rgba(255, 255, 255, 0.4);
+    background: var(--glass-hover);
 }
-
-
 
 #send-button {
     position: absolute;
-    right: 20px;
+    right: 16px;
+    display: flex;
     cursor: pointer;
 }
 
+/* ---------- More projects grid ---------- */
 
-/* More project */
-
-/* Container styling */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 0 2rem;
 }
 
-/* Project grid with 1, 2, or 3 columns depending on screen size */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -143,74 +145,77 @@ input:focus {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .project-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Project card styling */
 .project-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    background: var(--glass-soft);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    height: 450px;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
+    background: var(--glass-hover);
+    border-color: var(--glass-border-strong);
 }
 
 .project-image {
+    display: block;
     width: 100%;
     height: 12rem;
     object-fit: cover;
+    border-bottom: 1px solid var(--glass-border);
 }
 
-/* Content area of the project card */
 .content {
-    padding: .8rem;
+    padding: 1rem 1.1rem 1.25rem;
 }
 
 .content h3 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .content p {
-    color: #606060;
+    font-size: 14.5px;
     margin-bottom: 1rem;
 }
 
-/* Stack badges styling */
 .stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.45rem;
 }
 
 .badge {
-    background-color: #ebf8ff;
-    color: #3182ce;
-    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border: 1.5px solid var(--glass-border-strong);
+    border-radius: 7px;
+    font-size: 0.7rem;
     font-weight: 500;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
 }
 
-
+@media screen and (max-width: 1100px) {
+    .project-section {
+        padding: 40px 40px 0;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .chatbot-project-div {
         flex-direction: column;
-    }
-
-    .chatbot-info-div {
-        padding: 0;
-        padding-top: 10px;
+        gap: 10px;
     }
 
     .chat-container,
@@ -219,11 +224,6 @@ input:focus {
     }
 
     .project-section {
-        padding: 0;
+        padding: 25px 20px 0;
     }
-
-    .project-card {
-        height: 420px;
-    }
-
 }

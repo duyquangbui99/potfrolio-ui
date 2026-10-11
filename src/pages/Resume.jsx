@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom';
 
 function Resume() {
     return (
-        <div className="flex-row">
+        <div className="flex-row resume-page">
             <div className="resume-container">
+                <div className="window-bar">
+                    <div className="window-dots"><span></span><span></span><span></span></div>
+                    <p className="window-url">quangbui.dev/resume</p>
+                </div>
+                <div className="resume-body">
                 {/* Header */}
                 <header className="header">
                     <h1>Quang Bui</h1>
@@ -150,6 +155,7 @@ function Resume() {
                 <footer className="footer">
                     <p>&copy; 2026 Quang Bui. All rights reserved.</p>
                 </footer>
+                </div>
             </div>
         </div>
     );

@@ -32,6 +32,7 @@ const expData = [
     {
         position: "Web Developer",
         logo: tranquility,
+        logoClass: "logo-cover",
         company: "Tranquility Nail and Spa",
         location: "Tulsa, OK",
         date: "June 2023 - May 2024",
