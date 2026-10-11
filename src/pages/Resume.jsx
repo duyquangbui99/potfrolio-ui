@@ -2,15 +2,15 @@
 import '../styles/resume.css';
 import { Link } from 'react-router-dom';
 import resumePdf from '../assets/Quang Bui - Resume.pdf';
+import WindowBar from '../components/WindowBar';
+import { useWindow } from '../context/WindowContext';
 
 function Resume() {
+    const { panelProps: { windowClass, ref: panelRef, onAnimationEnd } } = useWindow();
     return (
         <div className="flex-row resume-page">
-            <div className="resume-container">
-                <div className="window-bar">
-                    <div className="window-dots"><span></span><span></span><span></span></div>
-                    <p className="window-url">quangbui.dev/resume</p>
-                </div>
+            <div className={`resume-container ${windowClass}`} ref={panelRef} onAnimationEnd={onAnimationEnd}>
+                <WindowBar url="quangbui.dev/resume" />
                 <div className="resume-body">
                 {/* Header */}
                 <header className="header">

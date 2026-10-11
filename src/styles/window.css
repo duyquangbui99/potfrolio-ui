@@ -1,0 +1,397 @@
+/* window.css: interactive window controls, dock and closed screen */
+
+/* ---------- Traffic-light buttons ---------- */
+
+.window-dots {
+    display: flex;
+    gap: 9px;
+}
+
+.window-dot {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+    transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.window-dot:active {
+    filter: brightness(0.8);
+    transform: scale(0.92);
+}
+
+.window-dot:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.7);
+    outline-offset: 2px;
+}
+
+.dot-close {
+    background: #ff5f57;
+}
+
+.dot-minimize {
+    background: #febc2e;
+}
+
+.dot-fullscreen {
+    background: #28c840;
+}
+
+/* Glyphs appear when hovering the group, like macOS */
+.window-dot svg {
+    width: 9px;
+    height: 9px;
+    opacity: 0;
+    transition: opacity 0.12s ease;
+}
+
+.window-dot path {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.6);
+    stroke-width: 1.4;
+    stroke-linecap: round;
+}
+
+.window-dot path.glyph-fill {
+    fill: rgba(0, 0, 0, 0.6);
+    stroke: none;
+}
+
+.window-dots:hover .window-dot svg,
+.window-dots:focus-within .window-dot svg {
+    opacity: 1;
+}
+
+.window-bar {
+    user-select: none;
+}
+
+/* ---------- Panel animations ---------- */
+
+.window-minimizing {
+    animation: genie-out 0.6s cubic-bezier(0.55, 0, 0.8, 0.4) forwards;
+    pointer-events: none;
+}
+
+.window-closing {
+    animation: window-close 0.28s ease-in forwards;
+    pointer-events: none;
+}
+
+.window-restoring {
+    animation: genie-in 0.55s cubic-bezier(0.2, 0.85, 0.3, 1) both;
+}
+
+.window-minimized,
+.window-closed {
+    display: none !important;
+}
+
+/* Squash vertically first, then shrink into the dock: a light take on the genie effect */
+@keyframes genie-out {
+    0% {
+        transform: none;
+        opacity: 1;
+    }
+
+    45% {
+        transform: scale(0.75, 0.45);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(0.02, 0.01);
+        opacity: 0;
+    }
+}
+
+@keyframes genie-in {
+    0% {
+        transform: scale(0.04, 0.02);
+        opacity: 0;
+    }
+
+    55% {
+        transform: scale(0.8, 0.6);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes window-close {
+    to {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+/* ---------- Fullscreen: sidebar slides away, window takes the stage ---------- */
+
+.app-shell .main-sidebar {
+    transition: max-width 0.45s ease, margin 0.45s ease, opacity 0.3s ease, transform 0.45s ease;
+    max-width: 320px;
+}
+
+.shell-fullscreen .main-sidebar {
+    max-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 0;
+    transform: translateX(-40px);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shell-fullscreen .main-about-me {
+    margin-left: 20px;
+}
+
+.shell-fullscreen .resume-container {
+    max-width: none;
+    margin-left: 20px;
+}
+
+/* ---------- Dock ---------- */
+
+.dock {
+    position: fixed;
+    left: 50%;
+    bottom: 14px;
+    z-index: 900;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 9px 12px;
+    background: var(--glass);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 22px;
+    box-shadow: var(--glass-shadow), var(--glass-highlight);
+    transform: translate(-50%, 140%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.45s cubic-bezier(0.2, 0.85, 0.3, 1), opacity 0.3s ease;
+}
+
+.dock-visible {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dock-item {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: var(--glass-soft);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.dock-item:hover,
+.dock-item:focus-visible {
+    transform: translateY(-8px) scale(1.12);
+    background: var(--glass-hover);
+    outline: none;
+}
+
+.dock-item img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    opacity: 0.85;
+}
+
+.dock-app {
+    overflow: visible;
+    background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.05) 70%);
+}
+
+.dock-app img {
+    width: 44px;
+    height: 44px;
+    filter: none;
+    opacity: 1;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* "App is running" dot */
+.dock-app.is-running::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    border-radius: 50%;
+    background: var(--text);
+}
+
+/* Bounce when the window lands in the dock */
+.dock-visible .dock-app.is-running {
+    animation: dock-bounce 0.5s ease 0.55s;
+}
+
+@keyframes dock-bounce {
+    40% {
+        transform: translateY(-12px);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    85% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Hover label above each icon */
+.dock-item::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 3px 10px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--glass-strong);
+    border: 1px solid var(--glass-border);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.dock-item:hover::after,
+.dock-item:focus-visible::after {
+    opacity: 1;
+}
+
+.dock-divider {
+    align-self: stretch;
+    width: 1px;
+    margin: 4px 2px;
+    background: var(--glass-border-strong);
+}
+
+/* ---------- Closed screen ---------- */
+
+.closed-screen {
+    flex: 1;
+    min-height: calc(100vh - 40px);
+    margin: 20px 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8vw 80px;
+    box-sizing: border-box;
+    animation: fade-up 0.6s ease 0.1s both;
+}
+
+.closed-screen .hero-role {
+    margin: 20px 0 34px;
+}
+
+.closed-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.closed-btn {
+    padding: 11px 24px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    background: var(--glass-soft);
+    border: 1.5px solid var(--glass-border-strong);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.closed-btn:hover {
+    background: var(--glass-hover);
+    transform: translateY(-2px);
+}
+
+.closed-btn:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 3px;
+}
+
+.closed-btn-primary {
+    color: #141416;
+    background: var(--text);
+    border-color: var(--text);
+}
+
+.closed-btn-primary:hover {
+    background: #ffffff;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+}
+
+/* Keep animations very short for reduced motion; onAnimationEnd still needs to fire */
+@media (prefers-reduced-motion: reduce) {
+
+    .window-minimizing,
+    .window-closing,
+    .window-restoring,
+    .closed-screen {
+        animation-duration: 0.01s;
+        animation-delay: 0s;
+    }
+
+    .dock,
+    .app-shell .main-sidebar {
+        transition: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .closed-screen {
+        margin: 0;
+        padding: 40px 24px 120px;
+        min-height: calc(100vh - 70px);
+    }
+}
+
+/* The resume page wrapper would otherwise share the row with the closed screen */
+.shell-closed .resume-page {
+    display: none;
+}
+
+.window-url {
+    pointer-events: none;
+}

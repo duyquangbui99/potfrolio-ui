@@ -9,16 +9,16 @@ import '../styles/aboutMe.css';
 import Experiences from './Experiences';
 import BookingProject from './BookingProject';
 import { Link } from 'react-router-dom';
+import WindowBar from './WindowBar';
+import { useWindow } from '../context/WindowContext';
 
 
 function AboutMe({ isOpen }) {
+    const { panelProps: { windowClass, ref: panelRef, onAnimationEnd } } = useWindow();
 
     return (
-        <div className="main-about-me" id="aboutme">
-            <div className="window-bar">
-                <div className="window-dots"><span></span><span></span><span></span></div>
-                <p className="window-url">quangbui.dev</p>
-            </div>
+        <div className={`main-about-me ${windowClass}`} ref={panelRef} onAnimationEnd={onAnimationEnd} id="aboutme">
+            <WindowBar url="quangbui.dev" />
             <div className="about-me">
                 <div className="about-me-text">
                     <h1 className="hero-name">Quang Bui</h1>
