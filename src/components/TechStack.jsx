@@ -10,11 +10,11 @@ function TechStack() {
                         {tech.multiple ? (
                             <div className="mutiple-icons paddbottom10px">
                                 {tech.multiple.map((src, i) => (
-                                    <img key={i} src={src} alt={tech.alt} className="tech-icon" />
+                                    <img key={i} src={src} alt={tech.alt} className="tech-icon" loading="lazy" decoding="async" />
                                 ))}
                             </div>
                         ) : (
-                            <img src={tech.icon} alt={tech.alt} className="tech-icon paddbottom20px" />
+                            <img src={tech.icon} alt={tech.alt} className="tech-icon paddbottom20px" loading="lazy" decoding="async" />
                         )}
                         <p>{tech.description}</p>
                     </div>

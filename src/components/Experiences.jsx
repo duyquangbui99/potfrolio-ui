@@ -13,7 +13,7 @@ function Experiences() {
                         {/* Icon and Info Section */}
                         <div className="exp-header">
                             <div className="exp-logo">
-                                <img src={exp.logo} alt={`${exp.company} logo`} />
+                                <img src={exp.logo} alt={`${exp.company} logo`} loading="lazy" decoding="async" />
                             </div>
 
                             <div className="exp-title-info">

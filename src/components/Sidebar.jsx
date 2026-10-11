@@ -1,6 +1,6 @@
 // Sidebar.jsx
 import React from "react";
-import avatar from '../assets/images/mePic.JPG';
+import avatar from '../assets/images/mePic.webp';
 import addressPin from '../assets/images/location.svg';
 import linkedInIcon from '../assets/images/linkedInIcon.svg';
 import gitHubIcon from '../assets/images/githubIcon.svg';
@@ -22,11 +22,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             <div className={`nav-side-bar side-bar ${isOpen ? 'sidebar-open' : ''}`}>
                 {!isOpen && <h2>Quang Bui</h2>}
                 <img src={avatar} alt="avatar" className="img-ava" />
-                <p>Hi, I'm Quang Bui | SWE intern at American Fidelity | Graduate Student at Oklahoma City University</p>
+                <p>Hi, I'm Quang Bui | Full Stack Developer at Paul Logistic | M.S. in Computer Science, Oklahoma City University</p>
 
                 <div className="logo-div">
                     <img src={addressPin} alt="Address Pin" className="address-pin" />
-                    <p>Houston, Texas</p>
+                    <p>Tulsa, Oklahoma</p>
                 </div>
                 <div className="line-break"></div>
 

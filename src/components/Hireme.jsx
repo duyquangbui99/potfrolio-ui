@@ -18,7 +18,7 @@ function HireMe() {
                     <div className="contact-info-container">
                         <img src={linkedinIcon} alt="LinkedIn icon" className="contact-icon" />
                         <p>
-                            <a href="https://www.linkedin.com/in/quang-bui-4b7059256/" target="_blank" rel="noreferrer">
+                            <a href="https://www.linkedin.com/in/duyquangbui99" target="_blank" rel="noreferrer">
                                 LinkedIn
                             </a>
                         </p>

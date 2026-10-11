@@ -10,7 +10,7 @@ function Projects() {
                 {projects.map((project, index) => (
                     <a href={project.link} target="_blank" rel="noreferrer" key={index}>
                         <div className="project-card">
-                            <img src={project.image} alt={project.title} className="project-image" />
+                            <img src={project.image} alt={project.title} className="project-image" loading="lazy" decoding="async" />
                             <div className="content">
                                 <h3>{project.title}</h3>
                                 <p>{project.description}</p>

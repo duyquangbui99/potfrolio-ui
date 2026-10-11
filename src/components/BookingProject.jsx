@@ -1,5 +1,5 @@
 import React from 'react';
-import bookingDashboard from '../assets/images/booking-dashboard.png';
+import bookingDashboard from '../assets/images/booking-dashboard.webp';
 import githubIcon from '../assets/images/githubIcon.svg';
 import webIcon from '../assets/images/web.svg';
 import '../styles/bookingProject.css';
@@ -12,6 +12,8 @@ function BookingProject() {
                     src={bookingDashboard}
                     alt="Booking Dashboard"
                     className="booking-image"
+                    loading="lazy"
+                    decoding="async"
                 />
                 <div className="project-info">
                     <h3>Schedulo</h3>

@@ -1,6 +1,6 @@
 import projectIcon from '../assets/images/project.svg';
 import resumeIcon from '../assets/images/resume.svg';
-import avatar from '../assets/images/meAvatar.png';
+import avatar from '../assets/images/meAvatar.webp';
 import TechStack from './TechStack';
 import Chatbot from './Chatbot';
 import Projects from './Projects';
@@ -18,13 +18,13 @@ function AboutMe({ isOpen }) {
             <div className="about-me">
                 <div className="about-me-text">
                     <h1>QUANG BUI</h1>
-                    <h2>Dedicated and Enthusiastic Software Engineer</h2>
+                    <h2>Full Stack Developer</h2>
                     <p>
-                        Hi, I’m Quang! I’m a tech enthusiast and graduate student at Oklahoma City University, finishing my Master’s in Computer Science by December 2025.</p>
-                    <p>  I specialize in full-stack development using modern frameworks and libraries, and I have working knowledge of Azure cloud computing. As a current Software Development Intern at American Fidelity, I contribute to building scalable, real-world applications.</p>
+                        Hi, I’m Quang! I’m a Full Stack Developer at Paul Logistic in Tulsa, OK, with a Master’s in Computer Science from Oklahoma City University.</p>
+                    <p>  I build automation pipelines with Python and Selenium, serverless integrations on AWS , and internal dashboards with React, Node.js, and PostgreSQL. Before that, I was a Software Development Intern at American Fidelity, shipping features in C#, .NET, and Angular.</p>
 
                     <p style={{ fontWeight: 500 }}>
-                        I am actively seeking a summer internship or full-time role as a software engineer or full-stack developer where I can apply my skills to deliver impactful solutions.
+                        I enjoy turning manual, repetitive workflows into reliable software that teams actually use.
                     </p>
 
                     <div className="flex-row gap-30">
