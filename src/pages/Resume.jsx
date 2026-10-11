@@ -1,6 +1,7 @@
 // src/pages/Resume.jsx
 import '../styles/resume.css';
 import { Link } from 'react-router-dom';
+import resumePdf from '../assets/Quang Bui - Resume.pdf';
 
 function Resume() {
     return (
@@ -18,6 +19,14 @@ function Resume() {
                         <p>Tulsa, OK</p>
                         <p>(539) 292-6908 | qbui011099@gmail.com</p>
                         <div className="links">
+                            <a href={resumePdf} download="Quang Bui - Resume.pdf" className="export-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                    <path d="M12 3v12" />
+                                    <path d="m7 10 5 5 5-5" />
+                                    <path d="M5 21h14" />
+                                </svg>
+                                Export PDF
+                            </a>
                             <a href="https://linkedin.com/in/duyquangbui99" target="_blank" rel="noreferrer">LinkedIn</a>
                             <a href="https://github.com/duyquangbui99" target="_blank" rel="noreferrer">GitHub</a>
                             <Link to="/">

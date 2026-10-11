@@ -69,6 +69,21 @@
     background-color: var(--glass-hover);
 }
 
+/* Primary action: filled light pill so it stands out from the outlined links */
+.links a.export-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background-color: var(--text);
+    border-color: var(--text);
+    color: #141416;
+}
+
+.links a.export-btn:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
 /* Sections */
 .resume-container section {
     margin-bottom: 34px;
