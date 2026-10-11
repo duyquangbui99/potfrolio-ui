@@ -20,6 +20,11 @@ function App() {
 
   return (
     <Router>
+      <div className="bg-scene" aria-hidden="true">
+        <div className="chrome-sphere sphere-1"></div>
+        <div className="chrome-sphere sphere-2"></div>
+        <div className="chrome-ring"></div>
+      </div>
       <div className="flex-row">
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(false)} />
         <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />

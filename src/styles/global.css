@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Poppins is loaded from public/index.html */
+
+:root {
+    /* Surfaces */
+    --bg: #0d0d0f;
+    --glass: rgba(38, 38, 42, 0.4);
+    --glass-strong: rgba(30, 30, 34, 0.82);
+    --glass-soft: rgba(255, 255, 255, 0.05);
+    --glass-hover: rgba(255, 255, 255, 0.09);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-border-strong: rgba(255, 255, 255, 0.22);
+    --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+    --blur: blur(28px) saturate(140%);
+
+    /* Text */
+    --text: #f2f2f3;
+    --text-muted: #a1a1a6;
+    --text-dim: #6e6e73;
+    --heading-muted: #8d8d92;
+
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 10px;
+}
 
 * {
     margin: 0;
@@ -7,35 +31,204 @@
 
 html {
     scroll-behavior: smooth;
-    /* Optional if you want a global smooth scroll */
+    color-scheme: dark;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--bg);
+    color: var(--text);
     line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* For headers, apply heavier weight */
 h1,
 h2,
 h3 {
     font-weight: 500;
-    color: #333;
+    color: var(--text);
 }
 
-/* For paragraph text */
 p {
     font-weight: 300;
     font-size: 16px;
-    color: #555;
+    color: var(--text-muted);
     margin-bottom: 5px;
 }
 
 a {
     text-decoration: none;
+    color: var(--text);
 }
+
+::selection {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ---------- Background scene: soft light blobs + chrome objects ---------- */
+
+.bg-scene {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+        radial-gradient(38vmax 30vmax at 82% 12%, rgba(255, 255, 255, 0.24), transparent 70%),
+        radial-gradient(30vmax 26vmax at 8% 55%, rgba(255, 255, 255, 0.17), transparent 70%),
+        radial-gradient(44vmax 32vmax at 62% 92%, rgba(255, 255, 255, 0.2), transparent 70%),
+        var(--bg);
+}
+
+/* Fine grain so the gradients don't band */
+.bg-scene::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.chrome-sphere,
+.chrome-ring {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.chrome-sphere {
+    background:
+        radial-gradient(circle at 32% 28%, #ffffff 0%, #d9d9dc 9%, #8a8a90 26%, #2b2b30 52%, #0c0c0e 70%, #3d3d42 88%, #9a9aa0 100%);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.sphere-1 {
+    width: 150px;
+    height: 150px;
+    top: 4%;
+    right: 18%;
+}
+
+.sphere-2 {
+    width: 90px;
+    height: 90px;
+    top: 58%;
+    right: 2%;
+}
+
+.chrome-ring {
+    width: 420px;
+    height: 420px;
+    bottom: -210px;
+    left: 38%;
+    background: radial-gradient(circle,
+            transparent 52%,
+            #2a2a2e 54%,
+            #c9c9cd 57%,
+            #f5f5f7 58.5%,
+            #7c7c82 61%,
+            #1a1a1d 65%,
+            #6a6a70 68%,
+            transparent 70%);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+}
+
+/* ---------- Shared glass building blocks ---------- */
+
+.glass-panel {
+    background: var(--glass);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glass-shadow), var(--glass-highlight);
+}
+
+/* macOS-style window bar, echoing the browser-window mockup */
+.window-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 54px;
+    padding: 0 22px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.window-dots {
+    display: flex;
+    gap: 9px;
+}
+
+.window-dots span {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.window-dots span:nth-child(1) {
+    background: #ff5f57;
+}
+
+.window-dots span:nth-child(2) {
+    background: #febc2e;
+}
+
+.window-dots span:nth-child(3) {
+    background: #28c840;
+}
+
+.window-url {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    margin: 0;
+}
+
+/* Outlined chip, like the "4K | PSD" labels */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.75rem;
+    border: 1.5px solid var(--glass-border-strong);
+    border-radius: 7px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+/* Monochrome UI icons are dark SVGs; flip them to light on glass */
+.github-icon,
+.linkedin-icon,
+.address-pin,
+.person-icon,
+.project-icon,
+.resume-icon,
+.email-icon,
+.contact-icon,
+.menu-icon,
+.up-arrow-icon,
+.bot-icon {
+    filter: invert(1);
+    opacity: 0.85;
+}
+
+/* Section headings: heavy, muted, like the mockup title */
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--heading-muted);
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Layout ---------- */
 
 .flex-row {
     display: flex;
@@ -46,7 +239,7 @@ a {
 }
 
 .gap-30 {
-    gap: 30px;
+    gap: 16px;
     margin-top: 30px;
 }
 
@@ -61,7 +254,16 @@ a {
 .line {
     width: 100%;
     height: 1px;
-    background-color: rgb(210, 210, 210);
+    background-color: var(--glass-border);
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width: 769px) {
+    .main-sidebar {
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -69,4 +271,32 @@ a {
         margin: 0px;
     }
 
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .chrome-ring {
+        width: 280px;
+        height: 280px;
+        bottom: -140px;
+        left: 20%;
+    }
+
+    .sphere-1 {
+        width: 90px;
+        height: 90px;
+        right: -20px;
+    }
+
+    .sphere-2 {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .glass-panel {
+        background: var(--glass-strong);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
 }

@@ -5,7 +5,7 @@ import "../styles/experience.css";
 function Experiences() {
     return (
         <section className="experience-section" id="experience">
-            <h1>Work Experience</h1>
+            <h1 className="section-title">Work Experience</h1>
 
             <div className="experiences-container">
                 {expData.map((exp, index) => (
@@ -13,7 +13,7 @@ function Experiences() {
                         {/* Icon and Info Section */}
                         <div className="exp-header">
                             <div className="exp-logo">
-                                <img src={exp.logo} alt={`${exp.company} logo`} loading="lazy" decoding="async" />
+                                <img src={exp.logo} alt={`${exp.company} logo`} className={exp.logoClass} loading="lazy" decoding="async" />
                             </div>
 
                             <div className="exp-title-info">

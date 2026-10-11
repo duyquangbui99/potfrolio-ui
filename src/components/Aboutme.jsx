@@ -15,10 +15,14 @@ function AboutMe({ isOpen }) {
 
     return (
         <div className="main-about-me" id="aboutme">
+            <div className="window-bar">
+                <div className="window-dots"><span></span><span></span><span></span></div>
+                <p className="window-url">quangbui.dev</p>
+            </div>
             <div className="about-me">
                 <div className="about-me-text">
-                    <h1>QUANG BUI</h1>
-                    <h2>Full Stack Developer</h2>
+                    <h1 className="hero-name">Quang<br />Bui</h1>
+                    <h2 className="hero-role">full stack developer.</h2>
                     <p>
                         Hi, I’m Quang! I’m a Full Stack Developer at Paul Logistic in Tulsa, OK, with a Master’s in Computer Science from Oklahoma City University.</p>
                     <p>  I build automation pipelines with Python and Selenium, serverless integrations on AWS , and internal dashboards with React, Node.js, and PostgreSQL. Before that, I was a Software Development Intern at American Fidelity, shipping features in C#, .NET, and Angular.</p>
@@ -49,7 +53,6 @@ function AboutMe({ isOpen }) {
                 {!isOpen && (
                     <div className="circle-container">
                         <div className="circle circle1"></div>
-                        <div className="circle circle2"></div>
                         <div className="avatar-container">
                             <img src={avatar} alt="Avatar" className="avatar" />
                         </div>
@@ -63,13 +66,13 @@ function AboutMe({ isOpen }) {
 
             {/* Projects Section */}
             <div className="project-section" id="projects">
-                <h1>PROJECT</h1>
+                <h1 className="section-title">Projects</h1>
                 <Chatbot isOpen={isOpen} />
                 <BookingProject />
             </div>
 
             <div className="project-section" id="projects">
-                <h1 style={{ paddingTop: "30px" }}>MORE PROJECTS</h1>
+                <h1 className="section-title" style={{ paddingTop: "30px" }}>More Projects</h1>
                 <Projects />
             </div>
 
